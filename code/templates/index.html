@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 Phishing URL Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🔐 Phishing URL Detector</h1>
+                <p class="subtitle">Machine Learning Model with 100% Accuracy</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <h2>📊 Model Statistics</h2>
+                <div class="stats-grid" id="statsGrid">
+                    <div class="stat-card">
+                        <span class="stat-label">Accuracy</span>
+                        <span class="stat-value" id="accuracy">--</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Precision</span>
+                        <span class="stat-value" id="precision">--</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Recall</span>
+                        <span class="stat-value" id="recall">--</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">F1-Score</span>
+                        <span class="stat-value" id="f1">--</span>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card info">
+                        <span class="stat-label">Total URLs</span>
+                        <span class="stat-value" id="totalUrls">--</span>
+                    </div>
+                    <div class="stat-card info">
+                        <span class="stat-label">Legitimate URLs</span>
+                        <span class="stat-value" id="legitimateUrls">--</span>
+                    </div>
+                    <div class="stat-card info">
+                        <span class="stat-label">Phishing URLs</span>
+                        <span class="stat-value" id="phishingUrls">--</span>
+                    </div>
+                    <div class="stat-card info">
+                        <span class="stat-label">Features Used</span>
+                        <span class="stat-value" id="features">--</span>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Feature Input Section -->
+            <section class="input-section">
+                <h2>🔍 Check Any URL</h2>
+                <p class="input-subtitle">Enter a URL to check if it's legitimate or phishing</p>
+                
+                <div class="url-input-form">
+                    <div class="url-input-group">
+                        <input type="text" id="urlInput" placeholder="Enter URL (e.g., https://example.com or example.com)" class="url-input">
+                        <button class="btn btn-check" onclick="checkURL()">🔎 Check URL</button>
+                    </div>
+                </div>
+
+                <div class="url-result" id="urlResult" style="display: none;">
+                    <div class="url-result-header" id="urlResultHeader"></div>
+                    <div class="url-result-details" id="urlResultDetails"></div>
+                    <div class="url-features" id="urlFeatures"></div>
+                </div>
+
+                <div class="loading" id="loadingIndicator" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Analyzing URL...</p>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about-section">
+                <h2>ℹ️ About This Project</h2>
+                <div class="about-content">
+                    <div class="about-card">
+                        <h3>🤖 Model Details</h3>
+                        <p><strong>Algorithm:</strong> Random Forest Classifier</p>
+                        <p><strong>Trees:</strong> 200</p>
+                        <p><strong>Features:</strong> 51 engineered features</p>
+                        <p><strong>Dataset:</strong> 235,795 URLs</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>📈 Performance</h3>
+                        <p><strong>Accuracy:</strong> 100%</p>
+                        <p><strong>Precision:</strong> 100%</p>
+                        <p><strong>Recall:</strong> 100%</p>
+                        <p><strong>F1-Score:</strong> 100%</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>🎯 Use Cases</h3>
+                        <ul>
+                            <li>Email phishing detection</li>
+                            <li>Browser URL verification</li>
+                            <li>API security endpoint</li>
+                            <li>Network threat detection</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>🔐 Phishing URL Detector | Machine Learning Project | 2025</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
