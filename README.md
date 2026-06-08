@@ -12,11 +12,13 @@ Key Statistics:
 ✅ F1-Score: 100%
 ✅ Dataset: 235,795 URLs (100,945 legitimate + 134,850 phishing)
 ✅ Features: 51 engineered features
+
+
 🎯 Features
-URL length analysis
-Domain verification
-IP address detection
-TLD legitimacy scoring
-Obfuscation detection
-Character continuation analysis
-URL similarity indexing
+1.URL length analysis
+2.Domain verification
+3.IP address detection
+4.TLD legitimacy scoring
+5.Obfuscation detection
+6.Character continuation analysis
+7. URL similarity indexing
